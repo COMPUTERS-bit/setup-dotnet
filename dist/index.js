@@ -133,6 +133,9 @@ function writeFeedToFile(feedUrl, existingFileLocation, tempFileLocation) {
             .up()
             .up();
     });
+    xmlSource[1].configuration.push({
+        packageSourceCredentials
+    });
     // If NuGet fixes itself such that on Linux it can look for environment variables in the config file (it doesn't seem to work today),
     // use this for the value above
     //           process.platform == 'win32'
